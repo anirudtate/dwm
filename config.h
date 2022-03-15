@@ -13,7 +13,8 @@ static char normbordercolor[]       = "#1d2021";
 static char normfgcolor[]           = "#689d6a";
 static char selfgcolor[]            = "#1d2021";
 static char selbordercolor[]        = "#928374";
-static char selbgcolor[]            = "#8ec07c";
+/* static char selbgcolor[]            = "#8ec07c"; */
+static char selbgcolor[]            = "#928374";
 static const unsigned int baralpha = 0xe6;
 static const unsigned int borderalpha = OPAQUE;
 
@@ -71,6 +72,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
+/* static const char *dmenucmd[] = { "dmenu_run", NULL }; */
 static const char *termcmd[]  = { "st", NULL };
 
 #include "movestack.c"
