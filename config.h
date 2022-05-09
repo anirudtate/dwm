@@ -15,12 +15,6 @@ static char selfgcolor[]            = "#000000";
 static char normfgcolor[]           = "#458588";
 static char selbordercolor[]        = "#458588";
 static char selbgcolor[]            = "#458588";
-
-
-/* static char normfgcolor[]           = "#8ec07c"; */
-/* static char selbordercolor[]        = "#8ec07c"; */
-/* static char selbgcolor[]            = "#8ec07c"; */
-/* static char selbgcolor[]            = "#928374"; */
 static const unsigned int baralpha = 0xe6;
 static const unsigned int borderalpha = OPAQUE;
 
@@ -48,7 +42,6 @@ static const Rule rules[] = {
 	 */
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
 	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
@@ -97,11 +90,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
-	{ MODKEY,                       XK_Return, zoom,           {0} },
+	{ MODKEY,                       XK_m,      zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY|ShiftMask,             XK_f,      togglefloating, {0} },
 	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
@@ -110,9 +104,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_x,     xrdb,           {.v = NULL } },
-    { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
-    { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
-    { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+  { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
+  { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
+  { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
