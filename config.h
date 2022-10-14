@@ -9,13 +9,13 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrains Mono:size=10" };
 static const char dmenufont[]       = "JetBrains Mono:size=10";
-static char normbgcolor[]           = "#000000";
-static char normbordercolor[]       = "#000000";
-static char selfgcolor[]            = "#000000";
-static char normfgcolor[]           = "#ebdbb2";
-static char selbordercolor[]        = "#ebdbb2";
-static char selbgcolor[]            = "#458588";
-static const unsigned int baralpha = 0xe6;
+static char normbgcolor[]           = "#1a1b26";
+static char normbordercolor[]       = "#1a1b26";
+static char selfgcolor[]            = "#1a1b26";
+static char normfgcolor[]           = "#a9b1d6";
+static char selbordercolor[]        = "#a9b1d6";
+static char selbgcolor[]            = "#ff9e64";
+static const unsigned int baralpha = 0xf2;
 static const unsigned int borderalpha = OPAQUE;
 
 static char *colors[][3] = {
